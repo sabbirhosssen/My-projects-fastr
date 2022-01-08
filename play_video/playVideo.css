@@ -1,0 +1,111 @@
+* {
+  text-transform: capitalize;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #eee;
+}
+.vLinks {
+  display: none;
+}
+.container {
+  /* display: grid;
+  grid-template-columns: 2fr 1fr; */
+
+  /* gap: 15px; */
+  /* align-items: flex-start; */
+  padding: 5px 5%;
+}
+.container .main-video {
+  /* display: flex;
+  justify-content: space-between; */
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 15px;
+  background: #fff;
+  border-radius: 5px;
+  padding: 10px;
+}
+.container .main-video video {
+  width: 100%;
+  border-radius: 5px;
+}
+.container .main-video .title {
+  color: #333;
+  font-size: 23px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.container .video-list {
+  background: #fff;
+  border-radius: 5px;
+  height: 520px;
+  overflow-y: scroll;
+}
+.container .video-list::-webkit-scrollbar {
+  width: 7px;
+}
+.container .video-list::-webkit-scrollbar-track {
+  background: #ccc;
+  border-radius: 55px;
+}
+.container .video-list::-webkit-scrollbar-thumb {
+  background: #666;
+  border-radius: 55px;
+}
+.container .video-list .vid video {
+  width: 100px;
+  border-radius: 5px;
+}
+.container .video-list .vid .vid-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #f7f7f7f7;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  text-decoration: none;
+}
+.container .video-list .vid .vid-links:hover {
+  background: #ee6;
+  color: #fff;
+}
+
+.container .video-list .vid .titile {
+  color: #333;
+  font-size: 17px;
+}
+.activePod {
+  background: red;
+}
+
+@media (max-width: 900px) {
+  .container .main-video {
+    grid-template-columns: 1.5fr 1fr;
+    /* gap: 15px; */
+    background: #fff;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  .container {
+    padding: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .container .main-video {
+    grid-template-columns: 1fr;
+    /* gap: 15px; */
+    background: #fff;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  .container {
+    padding: 10px;
+  }
+}
